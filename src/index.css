@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-main: #f3fafb;
+  --color-red: #e30613;
+  --color-second: #0098a5;
+  --color-gray: #667085;
+  --animate-bounce: bounce 1.5s infinite;
+  --animate-scale: scale 1.5s infinite;
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-15%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  @keyframes scale {
+    0%,
+    100% {
+      transform: scale(2);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+html {
+  font-family: 'Cairo', serif;
+  overflow-y: scroll;
+}
+.custom-dash {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='gray' stroke-width='4' stroke-dasharray='4%2c18' stroke-dashoffset='33' stroke-linecap='square'/%3e%3c/svg%3e");
+}
