@@ -26,6 +26,7 @@ npm run test
 - application is in Arabic and English
 - Dark mode
 - responsive for all devices
+- download tracking data as pdf
 - API fetching and form state optimization
 - animated loader with bosta logo
 - using bosta logo in the error images
