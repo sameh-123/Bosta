@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Bosta Frontend Assessment
+this is the assessemnt for the frontend position at Bosta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Description
+it's a single page web application that helps the user tracking his order using the track number
 
-Currently, two official plugins are available:
+# Live
+https://bosta123.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Tools
+React for UI implementaion , Tailwind css for styling and jest for unit testing
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+npm run build
+## for build production
 ```
+```
+npm run dev
+## for running application in development
+```
+```
+npm run test
+## for the unit testing of the functionality of API
+```
+# features
+- application is in Arabic and English
+- Dark mode
+- responsive for all devices
+- API fetching and form state optimization
+- animated loader with bosta logo
+- using bosta logo in the error images
+
+
+
+# assumptions
+- i assumed that every range of codes in API data referes to a certain status like delievered , pending ....
+
+![image](https://github.com/user-attachments/assets/a6360522-9c96-49a1-ac01-9938ecb1c505)
+
+![image](https://github.com/user-attachments/assets/299a85b4-eab1-4210-8828-cee873a2bd4f)
+
+![screencapture-localhost-5173-2025-01-28-04_28_48](https://github.com/user-attachments/assets/52d3e9e6-f852-407f-8bfc-26facd8d6e02)
+
+![image](https://github.com/user-attachments/assets/730ab7f6-2e2e-4801-82c0-44c2fb8f9272)
+
