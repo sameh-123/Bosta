@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import serverError from '/public/serverError.svg';
+import serverError from '/public/serverError.png';
 export default function ServerError() {
   const { t } = useTranslation();
   return (
