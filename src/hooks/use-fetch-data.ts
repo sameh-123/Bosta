@@ -15,16 +15,16 @@ export default function useFetchData(id: string, lang: string) {
         setLoading(false);
         if (comingData.networkError) {
           setServerError(true);
-          setError((prev) => null);
-          setData((prev) => null);
+          setError(null);
+          setData(null);
         } else if (comingData.isClientError) {
           setError(comingData);
-          setServerError((prev) => false);
-          setData((prev) => null);
+          setServerError(false);
+          setData(null);
         } else {
-          setError((prev) => null);
-          setServerError((prev) => false);
-          setData((prev) => comingData);
+          setError(null);
+          setServerError(false);
+          setData(comingData);
         }
       };
       fetchData();

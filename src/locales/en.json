@@ -4,12 +4,10 @@
   "input-placeholder": "Tracking number..",
   "order": "ORDER",
   "expected": "Your order is expected to arrive in",
-  "status": {
-    "picked": "Picked Up",
-    "processing": "Processing",
-    "outDelivery": "Out for Delivery",
-    "delivered": "Delivered"
-  },
+  "status.picked": "Picked Up",
+  "status.processing": "Processing",
+  "status.outDelivery": "Out for Delivery",
+  "status.delivered": "Delivered",
   "trackDetails": "Tracking details",
   "noDetails": "No details",
   "serverError": "something went wrong ! check your internet connection",
