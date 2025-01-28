@@ -15,7 +15,7 @@ export default async function getData(id: string, lang: string) {
     }
     return fetchedData;
   } catch (err) {
-    console.log(err);
+    console.error(err);
     return {
       networkError: true,
     };

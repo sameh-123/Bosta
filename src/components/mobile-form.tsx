@@ -1,12 +1,14 @@
-import { useState } from 'react';
-import search from '/public/search.png';
-import searchNav from '/public/searchNav.png';
+import { useEffect, useRef, useState } from 'react';
+import search from '/search.png';
+import searchNav from '/searchNav.png';
 import { SyntheticEvent } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 export default function MobileForm() {
   const [isOpen, setOpen] = useState(false);
   const [params, setParams] = useSearchParams();
+  const ref = useRef<HTMLDivElement | null>(null);
+
   const { t } = useTranslation();
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
@@ -20,14 +22,33 @@ export default function MobileForm() {
         return prev;
       });
     }
-    setOpen(false)
-    console.log(target.id.value);
+    setOpen(false);
   };
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (!ref?.current?.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <div className="relative md:hidden">
-      <img src={searchNav} alt="search" onClick={() => setOpen(!isOpen)} className='size-8 cursor-pointer'/>
+      <img
+        src={searchNav}
+        alt="search"
+        onClick={() => setOpen(!isOpen)}
+        className="size-8 cursor-pointer"
+      />
       {isOpen && (
-        <div className="p-5 absolute -end-20 shadow-lg  top-16  z-50 bg-white rounded-lg">
+        <div
+          ref={ref}
+          className="p-5 absolute -end-20 shadow-lg  top-16  z-50 bg-white rounded-lg"
+        >
           <div className="text-gray text-lg font-bold mb-2">{t('title')}</div>
           <form
             onSubmit={handleSubmit}
@@ -35,7 +56,7 @@ export default function MobileForm() {
           >
             <div className="flex items-center">
               <button className="bg-red rounded-s-lg p-5 size-16 cursor-pointer">
-                <img src={search}  alt="search icon" className=''/>
+                <img src={search} alt="search icon" className="" />
               </button>
               <input
                 defaultValue={params.get('id') || ''}

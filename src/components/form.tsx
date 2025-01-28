@@ -1,5 +1,5 @@
 import { SyntheticEvent } from 'react';
-import searchIcon from '/public/search.png';
+import searchIcon from '/search.png';
 import { SetURLSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 export default function Form({
@@ -22,7 +22,6 @@ export default function Form({
         return prev;
       });
     }
-    console.log(target.id.value);
   };
   return (
     <form

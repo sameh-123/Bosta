@@ -1,4 +1,4 @@
-import loader from '/public/loader.svg';
+import loader from '/loader.svg';
 export default function Loading() {
   return (
     <div className="container mx-auto flex items-center justify-center mt-10">
@@ -8,3 +8,4 @@ export default function Loading() {
     </div>
   );
 }
+

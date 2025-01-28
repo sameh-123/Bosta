@@ -1,6 +1,6 @@
 import { i18n } from 'i18next';
-import logo_arabic from '/public/logo_arabic.png';
-import logo_english from '/public/logo_english.png';
+import logo_arabic from '/logo_arabic.png';
+import logo_english from '/logo_english.png';
 import MobileForm from './mobile-form';
 export default function MobileNav({ langOptions }: { langOptions: i18n }) {
   const lang = langOptions.language.slice(0, 2);

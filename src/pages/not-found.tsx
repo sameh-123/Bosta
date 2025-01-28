@@ -1,4 +1,4 @@
-import notFound from '/public/notFound.svg';
+import notFound from '/notFound.svg';
 export default function NotFound() {
   return (
     <div className="h-screen flex items-center justify-center">

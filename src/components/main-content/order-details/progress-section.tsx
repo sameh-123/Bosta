@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import checkMark from '/public/checkMark.png';
+import checkMark from '/checkMark.png';
 
 export function ProgressBar({
   Left = true,

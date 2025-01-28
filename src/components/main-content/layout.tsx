@@ -22,7 +22,6 @@ export default function ContentLayout({
     weekday: 'long',
   };
   const { t, i18n } = useTranslation();
-  console.table(clientError);
   if (isLoading) return <Loading />;
   if (isServerError) return <ServerError />;
   if (clientError?.isClientError)
