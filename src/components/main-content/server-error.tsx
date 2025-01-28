@@ -7,7 +7,6 @@ export default function ServerError() {
       <img
         src={serverError}
         alt="server error"
-        loading="lazy"
         className="w-80"
       />
       <div className="text-red md:text-2xl text-xl text-center italic">{t('serverError')}</div>
