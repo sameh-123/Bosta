@@ -5,7 +5,7 @@ import logo_english from '/logo_english.png';
 export default function Nav({ langOptions }: { langOptions: i18n }) {
   const lang = langOptions.language;
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
     const newLanguage = e?.target?.value || 'ar';
     langOptions.changeLanguage(newLanguage);
   };
@@ -23,7 +23,6 @@ export default function Nav({ langOptions }: { langOptions: i18n }) {
             name="language"
             id="language"
             className="focus-visible:outline-0"
-            // value={lang}
           >
             <option className="dark:text-black" value="ar">
               عربي

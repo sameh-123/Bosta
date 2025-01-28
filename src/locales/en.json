@@ -12,5 +12,6 @@
   "noDetails": "No details",
   "serverError": "something went wrong ! check your internet connection",
   "invalidNumber": "invalid or missing tracking number",
-  "errorNumber": "Kindly double-check your tracking number. If you believe there's an issue, please reach out to customer service"
+  "errorNumber": "Kindly double-check your tracking number. If you believe there's an issue, please reach out to customer service",
+  "pdf" : "Download as PDF"
 }

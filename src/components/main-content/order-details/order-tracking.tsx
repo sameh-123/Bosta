@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import type { TrackingData } from '../../../types';
 import { useMemo } from 'react';
+import getPdf from '../../../api/json-pdf';
 function formatTime(date: Date): string {
   let hours = date.getHours();
   const minutes = date.getMinutes().toString().padStart(2, '0');
@@ -40,10 +41,18 @@ export default function OrderTracking({
 
   return (
     <section className="my-10">
-      <div className="text-gray dark:text-slate-300 text-xl font-bold my-10">
-        {t('trackDetails')}
+      <div className="flex items-center gap-4">
+        <div className="text-gray dark:text-slate-300 text-xl font-bold my-10">
+          {t('trackDetails')}
+        </div>
+        <button
+          className="border-2 p-2 rounded-md cursor-pointer hover:text-white hover:bg-second"
+          onClick={() => getPdf(c)}
+        >
+          {t('pdf')}
+        </button>
       </div>
-      <div>
+      <>
         {dates.map((item) => {
           const dateDetails = proccessedData.get(item);
           return (
@@ -72,7 +81,7 @@ export default function OrderTracking({
             </div>
           );
         })}
-      </div>
+      </>
     </section>
   );
 }
